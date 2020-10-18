@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="post">
+    <select id="example" resultType="PostVO" parameterMap="map">
+        <!-- select query 문 -->
+        SELECT id as id,
+        status_msg as statusMsg, <!-- db 내 attribute명 as vo 속성 이름 -->
+        test_name as testName
+        FROM post
+        WHERE id = #{id}
+    </select>
+
+    <!-- insert, update, delete -->
+
+</mapper>
